@@ -31,12 +31,11 @@ Task #3
 function mul(...x) {
     let result = 1;
     for (let i=0; i<x.length; i++) {
-        if(!isNaN(x[i])) {
-            result*=x[i];
-        };
-
-        if(x.every(el => typeof(el)===Number)) {
+        if(x.every(el => typeof el !== 'number')) {
             result = 0;
+        };
+        if(typeof x[i] === 'number') {
+            result*=x[i];
         };
     }
     console.log(result);
