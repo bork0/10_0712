@@ -33,11 +33,11 @@ function mul(...x) {
     for (let i=0; i<x.length; i++) {
         if(!isNaN(x[i])) {
             result*=x[i];
-        }
+        };
 
-        if(x.every(el => typeof(el)===Number)) {
+        if(x.every(el => typeof(el)!==Number)) {
             result = 0;
-        }
+        };
     }
     console.log(result);
  };
