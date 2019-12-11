@@ -35,7 +35,7 @@ function mul(...x) {
             result*=x[i];
         };
 
-        if(x.every(el => typeof(el)!==Number)) {
+        if(x.every(el => typeof(el)===Number)) {
             result = 0;
         };
     }
